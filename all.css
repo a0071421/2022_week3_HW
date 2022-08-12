@@ -1,0 +1,854 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* utilities */
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* utilities */
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-sm-full {
+    max-width: 100%;
+    padding: 0;
+    padding-right: 0;
+  }
+}
+
+/* index.html */
+
+.header {
+  background: #aa0601;
+  padding: 12px 0;
+}
+
+.header h1 a {
+  display: block;
+  width: 80px;
+  height: 50px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/logo-white.png");
+  background-size: cover;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu a {
+  display: block;
+  padding: 0 64px;
+  color: white;
+  font-size: 20px;
+}
+
+.menu a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .menu a {
+    padding: 16px 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-bottom: 0px;
+  }
+  .header .header-content {
+    flex-direction: column;
+  }
+  .menu {
+    margin-top: 16px;
+  }
+  .menu .menu-item {
+    text-align: center;
+    width: 50%;
+    border: 1px solid white;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+
+  .menu a:hover {
+    background: pink;
+    color: black;
+  }
+}
+
+.banner {
+  position: relative;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png");
+  height: 787px;
+  background-size: cover;
+}
+
+.slogan {
+  position: absolute;
+  text-align: right;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.slogan h3 {
+  color: #650300;
+  font-size: 36px;
+}
+
+.slogan h2 {
+  color: #650300;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.slogan a {
+  display: inline-block;
+  background: #aa0601;
+  color: white;
+  padding: 8px;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header-sm.png");
+  }
+  .slogan h3 {
+    font-size: 16px;
+  }
+  .slogan h2 {
+    font-size: 24px;
+  }
+}
+
+.subslogan {
+  background: #fbf2f2;
+  color: #650300;
+  padding: 5rem 2rem;
+}
+
+.subslogan h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subslogan .special-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #650300;
+  margin-top: 2.5rem;
+}
+
+.subslogan .special-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+}
+
+.subslogan .special-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+}
+
+.subslogan .special-list li p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.subslogan .special-list li .detail {
+  font-size: 16px;
+  margin-top: 0.5rem;
+}
+
+.material-symbols-outlined.md-84 {
+  font-size: 84px;
+}
+
+@media (max-width: 992px) {
+  .subslogan .special-list li {
+    width: 48%;
+  }
+  .subslogan .special-list li:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .subslogan .special-list li {
+    width: 100%;
+  }
+}
+
+.classical {
+  color: #650300;
+  text-align: center;
+  padding: 5rem;
+}
+
+.classical h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.classical .classical-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.classical .classical-list li {
+  width: 32%;
+}
+
+.classical .classical-list li p {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .classical {
+    padding-left: 13.5rem;
+    padding-right: 13.5rem;
+  }
+
+  .classical .classical-list li {
+    width: 100%;
+  }
+  .classical .classical-list li:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .classical {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.design {
+  padding: 5rem;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg.png");
+  height: 608px;
+  background-size: cover;
+  text-align: center;
+}
+
+.design h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+}
+.design .design-list {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.design .design-list img {
+  display: block;
+}
+
+.design .design-list li {
+  width: 50%;
+}
+
+.design .design-list p {
+  padding: 0.5rem 0;
+  color: #aa0601;
+  font-size: 48px;
+  font-weight: 900;
+  font-style: italic;
+  background: white;
+}
+
+@media (max-width: 992px) {
+  .design {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg-md.png");
+    height: 960px;
+  }
+  .design .design-list {
+    flex-wrap: wrap;
+  }
+  .design .design-list li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .design {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg-sm.png");
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .design .design-list li {
+    width: 100%;
+  }
+  .design .design-list li:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.recommand {
+  padding: 5rem;
+}
+
+.recommand h2 {
+  color: #650300;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.recommand .recommand-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.recommand .recommand-list li {
+  width: 23%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card img {
+  display: block;
+}
+
+.card .card-content {
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px #00000029;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card .card-content h3,
+.card .card-content p {
+  font-size: 16px;
+  font-family: 500;
+}
+
+.card .card-content p {
+  margin-bottom: 3rem;
+}
+
+.card .card-content span {
+  font-size: 14px;
+  color: #707070;
+}
+
+@media (max-width: 992px) {
+  .recommand .recommand-list li {
+    width: 48%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .recommand {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .recommand .recommand-list li {
+    width: 100%;
+  }
+}
+
+.contact {
+  padding: 5rem;
+  background: #fbf2f2;
+}
+
+.contact-container {
+  max-width: 559px;
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  font-size: 48px;
+  font-weight: 700;
+  color: #650300;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 20;
+  margin-bottom: 1rem;
+}
+
+.contact form input[type="text"],
+textarea {
+  padding: 0.5rem;
+  border: 1px solid black;
+  width: 100%;
+  background: #fbf2f2;
+  margin-bottom: 1rem;
+}
+
+.contact textarea {
+  resize: none;
+}
+
+.contact form .button {
+  margin-top: 3rem;
+}
+
+.contact form button {
+  cursor: pointer;
+  background: #aa0601;
+  color: white;
+  padding: 1rem 11rem;
+  border: 1px solid #aa0601;
+  font-weight: 700;
+}
+
+.contact form button:hover {
+  background: pink;
+  border: 1px solid pink;
+  color: black;
+}
+
+@media (max-width: 997px) {
+  .contact-container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .contact form button {
+    padding: 1rem 0;
+    width: 100%;
+  }
+}
+
+.footer {
+  padding: 4rem;
+  background: #aa0601;
+}
+
+.footer .footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer .footer-menu,
+.footer .footer-media {
+  display: flex;
+}
+
+.footer .footer-menu a {
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.footer .footer-menu a:hover {
+  opacity: 0.8;
+}
+
+.footer .footer-media a {
+  margin-right: 2rem;
+}
+
+.footer .contact-info {
+  font-size: 36px;
+  padding-top: 2rem;
+}
+
+.footer .contact-info a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: inherit;
+}
+
+.footer .contact-info a:hover {
+  opacity: 0.8;
+}
+
+.footer .contact-info span {
+  margin-right: 0.5rem;
+  font-size: inherit;
+}
+
+.footer .copyright {
+  color: white;
+  margin-top: 1rem;
+}
+
+.footer .terms {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.footer .terms li {
+  margin-right: 2rem;
+}
+
+.footer .terms a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .footer .footer-media a {
+    margin-right: 1rem;
+  }
+  .footer .footer-media img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 0.5rem;
+  }
+  .footer .contact-info {
+    font-size: 16px;
+    padding-top: 1.5rem;
+  }
+  .footer .footer-media {
+    padding-top: 1.5rem;
+  }
+  .footer .footer-media img {
+    width: 24px;
+  }
+  .footer .footer-menu {
+    display: none;
+  }
+  .footer .contact-info {
+    order: -1;
+  }
+  .footer .copyright {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .footer .terms {
+    display: block;
+  }
+  .footer .terms li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* index.html */
+
+/* stronghold.html */
+
+.stronghold {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+}
+
+.stronghold h2 {
+  font-size: 48px;
+  padding-left: 1rem;
+  border-left: 8px solid #9F1213;
+  font-weight: 700;
+}
+
+.stronghold .pick-area {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.stronghold .pick-area label {
+    margin-right: 1rem;
+    width: 50%;
+}
+
+.stronghold .pick-area select {
+    color: #495057;;
+    padding: 0.375rem 0 0.375rem 0.75rem;
+    width: 40%;
+    border: 1px solid #CED4DA;
+}
+
+
+.stronghold .stronghold-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+    height: 100%;
+}
+
+.stronghold .stronghold-list-item {
+    width: 31.33%;
+}
+
+.stronghold .stronghold-list-item h3 {
+    padding: 0.5rem 0 0.5rem 0.75rem;
+    border-bottom: 1px solid #00000020;
+    font-size: 24px;
+}
+
+.stronghold .stronghold-list-item ul {
+    padding: 1rem 1rem 1rem 1.5rem;
+    font-size: 20px;
+}
+
+.stronghold .stronghold-list-item li {
+    gap: 0.5rem
+}
+
+.stronghold .stronghold-list-item .material-symbols-outlined {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.stronghold .stronghold-list-item .stronghold-list-item-detail {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: white;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.stronghold .stronghold-list-item .stronghold-list-item-detail:hover {
+  background-color: #aa0601;
+}
+
+@media (max-width: 992px) {
+    .stronghold .stronghold-list-item {
+        width: 46%;
+    }
+}
+
+@media (max-width: 767px) {
+    .stronghold .stronghold-list-item {
+        width: 100%;
+    }
+}
+
+/* stronghold.html */
